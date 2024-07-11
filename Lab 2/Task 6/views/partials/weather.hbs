@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <style>
+        body {
+            margin: 0px;
+
+            font-family: sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-center {
+            width: 70%;
+
+            display: flex;
+            align-items: center;
+
+            background-color: #e0e0e0;
+        }
+
+        .paragraph {
+            margin-inline: 15px;
+            margin-block: 15px;
+
+            font-size: xx-large;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 125%;
+
+            margin-inline: 5px;
+        }
+
+        .home-page {
+            color: #00000060;
+        }
+
+        .weather-page {
+            color: #000000;
+        }
+
+        {{!-- #weather {
+            display: none;
+        } --}}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-center">
+            <div class="paragraph">WeatherInfo</div>
+            <div>
+                <a href="/" class="home-page">Home</a>
+                <a href="/weather" class="weather-page">Weather</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <table class="cities">
+            <tr>
+                <td><a href="/weather/Zhytomyr" onclick="weatherInfo()">Житомир</a></td>
+                <td><a href="/weather/Kyiv" onclick="weatherInfo()">Київ</a>
+                <td><a href="/weather/Poltava" onclick="weatherInfo()">Полтава</a></td>
+                <td><a href="/weather/Sumy" onclick="weatherInfo()">Суми</a></td>
+            </tr>
+        </table>
+        <div id="weather">
+            <p>Погода в місті {{city}}</p>
+            <img src="https://openweathermap.org/img/wn/{{weather.weather.0.icon}}@2x.png" alt="">
+            <table>
+                <tr>
+                    <td>Тиск</td>
+                    <td>{{weather.main.pressure}}</td>
+                </tr>
+                <tr>
+                    <td>Вологість</td>
+                    <td>{{weather.main.humidity}}</td>
+                </tr>
+                <tr>
+                    <td>Температура</td>
+                    <td>{{weather.main.temp}}</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script>
+        function weatherInfo() {
+            let weather = document.getElementById('weather')
+            weather.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

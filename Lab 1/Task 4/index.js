@@ -17,7 +17,7 @@ console.log("Конкатенація переміних:", hello)
 
 const array4 = [1, 2, 3]
 const array5 = ["one", "two", "three"]
-const array6 = [true, false, true]
+const array6 = [true, false]
 
 // Створення масиву групованих значень по індексу
 const zipped = lodash.zip(array4, array5, array6)
@@ -26,4 +26,3 @@ console.log("Груповий масив:", zipped)
 
 // Повертає розмір строки або масиву
 console.log("Розмір переміної:", lodash.size(array5))
-

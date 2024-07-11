@@ -1,6 +1,7 @@
 {
-  "name": "others-tasks",
+  "name": "task-4",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,9 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "yargs": "^17.7.2"
+    "express": "^4.19.2",
+    "hbs": "^4.2.0"
   }
 }

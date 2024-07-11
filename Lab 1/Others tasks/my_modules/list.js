@@ -5,8 +5,7 @@ const listItems = (filePath) => {
         if (readErr) {
             return
         }
-
-        console.log(jsonObject)
+        console.console(jsonObject)
     })
 }
 
